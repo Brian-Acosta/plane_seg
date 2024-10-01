@@ -52,7 +52,7 @@ go() {
   pcl::search::KdTree<Point>::Ptr tree
     (new pcl::search::KdTree<Point>());
   tree->setInputCloud(mCloud);
-  std::vector<std::vector<int>> neighbors(n);
+  std::vector<std::vector<unsigned int>> neighbors(n);
   std::vector<float> distances;
   for (int i = 0; i < n; ++i) { 
     tree->radiusSearch(i, mSearchRadius, neighbors[i], distances);

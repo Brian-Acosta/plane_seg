@@ -56,7 +56,7 @@ go(const LabeledCloud::Ptr& iCloud, NormalCloud& oNormals) {
   pcl::search::KdTree<Point>::Ptr tree
     (new pcl::search::KdTree<Point>());
   tree->setInputCloud(iCloud);
-  std::vector<int> indices;
+  std::vector<unsigned int> indices;
   std::vector<float> distances;
 
   // loop
