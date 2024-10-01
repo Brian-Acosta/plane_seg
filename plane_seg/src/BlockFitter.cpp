@@ -22,7 +22,6 @@
 #include <pcl/filters/voxel_grid.h>
 #include <pcl/common/common.h>
 #include <pcl/surface/convex_hull.h>
-#include <pcl/io/pcd_io.h>
 
 #if defined(__clang__)
 # pragma clang diagnostic pop
@@ -142,7 +141,7 @@ go() {
   if (mDebug) {
     std::cout << "Original cloud size " << mCloud->size() << std::endl;
     std::cout << "Voxelized cloud size " << cloud->size() << std::endl;
-    pcl::io::savePCDFileBinary("cloud_full.pcd", *cloud);
+    // pcl::io::savePCDFileBinary("cloud_full.pcd", *cloud);
   }
 
   if (cloud->size() < 100) return result;
@@ -296,8 +295,8 @@ go() {
 
   if (mDebug) {
     std::cout << "Horizontal points remaining " << cloud->size() << std::endl;
-    pcl::io::savePCDFileBinary("cloud.pcd", *cloud);
-    pcl::io::savePCDFileBinary("robust_normals.pcd", *normals);
+    // pcl::io::savePCDFileBinary("cloud.pcd", *cloud);
+    // pcl::io::savePCDFileBinary("robust_normals.pcd", *normals);
   }
 
   // plane segmentation
